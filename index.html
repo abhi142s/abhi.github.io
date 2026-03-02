@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abhi – Robotics Engineer</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0a0a0f;
+      color: #e8e8f0;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      overflow: hidden;
+    }
+
+    /* Subtle grid background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(99,102,241,0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(99,102,241,0.07) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+    }
+
+    .container {
+      text-align: center;
+      padding: 2rem;
+      max-width: 680px;
+      animation: fadeUp 0.9s ease both;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #818cf8;
+      border: 1px solid rgba(99,102,241,0.35);
+      padding: 0.3rem 0.9rem;
+      border-radius: 999px;
+      margin-bottom: 1.8rem;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 3.8rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 1.2rem;
+      letter-spacing: -0.02em;
+    }
+
+    h1 span {
+      background: linear-gradient(135deg, #818cf8, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #94a3b8;
+      margin-bottom: 2.5rem;
+    }
+
+    .links {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.6rem 1.4rem;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+
+    a.primary {
+      background: linear-gradient(135deg, #6366f1, #38bdf8);
+      color: #fff;
+    }
+
+    a.primary:hover {
+      opacity: 0.85;
+      transform: translateY(-2px);
+    }
+
+    a.ghost {
+      border: 1px solid rgba(255,255,255,0.15);
+      color: #cbd5e1;
+    }
+
+    a.ghost:hover {
+      border-color: rgba(99,102,241,0.6);
+      color: #818cf8;
+      transform: translateY(-2px);
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 3px;
+      height: 1em;
+      background: #818cf8;
+      margin-left: 3px;
+      vertical-align: middle;
+      animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink { 50% { opacity: 0; } }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge">Robotics &amp; Control Systems Engineer</div>
+
+    <h1>Hi, I'm <span>Abhi</span>.</h1>
+
+    <p>
+      I work at the intersection of control theory, path planning and making things move.
+    </p>
+
+    <div class="links">
+      <a class="primary" href="#projects">View Projects</a>
+      <a class="ghost" href="https://github.com/abhi" target="_blank">GitHub</a>
+      <a class="ghost" href="mailto:abhi@example.com">Contact</a>
+    </div>
+  </div>
+</body>
+</html>
