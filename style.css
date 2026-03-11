@@ -97,6 +97,14 @@ ul.bullets li::before{content:'→';position:absolute;left:0;color:var(--accent)
   margin-bottom:2rem;display:inline-block;transition:all 0.2s;}
 .back-btn:hover{border-color:var(--accent);color:var(--accent);}
 
+/* POST PREV / NEXT NAV */
+.post-nav{display:flex;justify-content:space-between;margin-top:3rem;padding-top:2rem;
+  border-top:1px solid var(--border);}
+.post-nav-btn{background:none;border:1px solid var(--border);color:var(--muted);
+  padding:0.5rem 1.2rem;border-radius:8px;cursor:pointer;font-size:0.85rem;font-family:inherit;
+  transition:all 0.2s;}
+.post-nav-btn:hover{border-color:var(--accent);color:var(--accent);}
+
 /* BLOG POST CONTENT */
 .post-header{text-align:center;margin-bottom:3rem;}
 .post-header .role{color:var(--accent);font-size:0.85rem;letter-spacing:0.12em;

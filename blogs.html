@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Abhi Srinivasan – Blogs</title>
+  <title>Abhi Srinivasan – Posts</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
@@ -13,16 +13,15 @@
   <div class="nav-tabs">
     <a class="tab-btn" href="index.html">Experience</a>
     <a class="tab-btn" href="projects.html">Projects</a>
-    <a class="tab-btn active" href="blogs.html">Blogs</a>
+    <a class="tab-btn active" href="blogs.html">Posts</a>
   </div>
 </nav>
 
 <!-- BLOG LIST VIEW -->
 <div class="page" id="blog-list">
   <div class="hero">
-    <div class="role">Writing & Thoughts</div>
-    <h1>My <span>Blogs</span></h1>
-    <p>Writing about robotics, control systems, and lessons learned building real robots.</p>
+    <h1>My <span>Posts</span></h1>
+    <p>Random collection of events and thoughts.</p>
   </div>
 
   <section>
@@ -35,28 +34,28 @@
          3. Add matching post content in the #blog-post section at the bottom
          ============================================= -->
 
-    <div class="blog-card" onclick="openPost('post-1')">
+    <div class="blog-card" onclick="openPost('post-hackathon')">
       <div class="blog-card-inner">
         <div>
-          <div class="proj-title">Placeholder: Lessons from Building a Wafer Detection System</div>
-          <div class="proj-meta">March 2026 · 5 min read</div>
-          <p class="blog-summary">What I learned pushing robot accuracy to 100 microns in a live semiconductor fab — and why the hardest problems weren't the ones I expected.</p>
+          <div class="proj-title">1st Place at Columbia's First Media Hackathon — Chemistry</div>
+          <div class="proj-meta">2019 · 3 min read</div>
+          <p class="blog-summary">A cross-school team of engineers and MBAs pitched an Android dating app with a fortune-telling matching algorithm — and won.</p>
           <div class="tag-row">
-            <span class="tag">Robotics</span><span class="tag">Semiconductor</span><span class="tag">Controls</span>
+            <span class="tag">Hackathon</span><span class="tag">Startup</span><span class="tag">Columbia</span>
           </div>
         </div>
         <div class="blog-arrow">→</div>
       </div>
     </div>
 
-    <div class="blog-card" onclick="openPost('post-2')">
+    <div class="blog-card" onclick="openPost('post-fsg')">
       <div class="blog-card-inner">
         <div>
-          <div class="proj-title">Placeholder: Force Control Intuitions for Human-Robot Collaboration</div>
-          <div class="proj-meta">Feb 2026 · 4 min read</div>
-          <p class="blog-summary">Building a robotic crane that responds to human touch requires more than a good controller — it requires empathy in the design.</p>
+          <div class="proj-title">Building a Formula Student Car and Racing it in Germany</div>
+          <div class="proj-meta">2018 · 5 min read</div>
+          <p class="blog-summary">Three years of late nights, a homemade electronic gear shifter, and a technical inspection crisis at Hockenheimring — what it was actually like competing at Formula Student Germany.</p>
           <div class="tag-row">
-            <span class="tag">Force Control</span><span class="tag">HRI</span><span class="tag">Design</span>
+            <span class="tag">Motorsport</span><span class="tag">Mechanical Engineering</span><span class="tag">Formula Student</span>
           </div>
         </div>
         <div class="blog-arrow">→</div>
@@ -68,52 +67,94 @@
 
 <!-- BLOG POST VIEW (hidden by default) -->
 <div class="page" id="blog-post" style="display:none;">
-  <button class="back-btn" onclick="closePost()">← Back to Blogs</button>
+  <button class="back-btn" onclick="closePost()">← Back to Posts</button>
 
   <article id="post-content"></article>
+
+  <div class="post-nav">
+    <button class="post-nav-btn" id="btn-prev" onclick="navigatePost(-1)">← Previous</button>
+    <button class="post-nav-btn" id="btn-next" onclick="navigatePost(1)">Next →</button>
+  </div>
 </div>
 
 <!-- POST CONTENT TEMPLATES -->
-<template id="post-1">
+<template id="post-hackathon">
   <div class="post-header">
-    <div class="role">March 2026 · 5 min read</div>
-    <h1>Lessons from Building a <span>Wafer Detection System</span></h1>
+    <div class="role">2019 · 3 min read</div>
+    <h1>1st Place at Columbia's First <span>Media Hackathon</span></h1>
     <div class="tag-row" style="justify-content:center;margin-top:1rem;">
-      <span class="tag">Robotics</span><span class="tag">Semiconductor</span><span class="tag">Controls</span>
+      <span class="tag">Hackathon</span><span class="tag">Startup</span><span class="tag">Columbia</span>
     </div>
   </div>
   <div class="post-body">
-    <p>Replace this placeholder with your blog content. You can use standard HTML — paragraphs, headings, code blocks, images, etc.</p>
-    <h2>Section Heading</h2>
-    <p>More content here...</p>
-    <pre><code># Example code block
-def detect_wafer(image):
-    pass</code></pre>
+    <img src="img/columbia_hackathon.jpg" alt="Chemistry team at Columbia Hackathon" style="width:100%;border-radius:12px;margin-bottom:1.5rem;"/>
+
+    <p>Columbia Business School and SEAS co-hosted their first Media Hackathon, bringing together students from across the university to pitch media and tech products in 24 hours. Our team — William Baek, Jamie Kim, and Maxwell Schilling from CBS, and Vigneswari M and I from SEAS — won 1st place in the Media category.</p>
+
+    <h2>The Idea: Chemistry</h2>
+    <p>We built <strong>Chemistry</strong> — a dating app aimed at South Asian and East Asian women in their mid-20s to early-30s who are looking for serious relationships, not just casual matches. The core insight was that existing dating apps felt culturally misaligned for this demographic: too casual, lacking privacy controls, and disconnected from community norms around matchmaking.</p>
+    <p>Our tagline: <em>Demystifying destiny.</em></p>
+
+    <h2>The Matching Algorithm</h2>
+    <p>The differentiator was a fortune-telling-inspired matching algorithm — leaning into the cultural familiarity with astrology and destiny-based compatibility rather than fighting it. The idea was to wrap a data-driven compatibility engine in a narrative that felt familiar and trustworthy to the target user.</p>
+
+    <h2>What We Built Around It</h2>
+    <p>Beyond the algorithm hook, we designed the product around three real pain points:</p>
+    <ul>
+      <li><strong>Safety:</strong> Automatic message scanning to flag and prompt reporting of suspicious behavior, plus a no-show reporting feature for ghost dates.</li>
+      <li><strong>Privacy:</strong> Age shown as a range, first-name-only display, and two-way confirmation before direct messaging.</li>
+      <li><strong>Trust:</strong> Identity verification through Facebook, first-degree-of-separation filtering, and phone number verification.</li>
+    </ul>
+
+    <h2>Market Framing</h2>
+    <p>We positioned Chemistry at the intersection of the $36B mystical services market and the $12B online dating market — both growing, and almost entirely untouched by the same product. The go-to-market was tight: a specific, underserved user who was already spending in both categories.</p>
+
+    <h2>Takeaway</h2>
+    <p>The cross-school collaboration was the real win. Having CBS teammates who could think through business model, user acquisition, and pitch narrative alongside SEAS engineers who could speak to technical feasibility made the pitch feel complete. It was a good reminder that the best hackathon teams aren't the most homogeneous — they're the most complementary.</p>
   </div>
 </template>
 
-<template id="post-2">
+<template id="post-fsg">
   <div class="post-header">
-    <div class="role">Feb 2026 · 4 min read</div>
-    <h1>Force Control Intuitions for <span>Human-Robot Collaboration</span></h1>
+    <div class="role">2018 · 5 min read</div>
+    <h1>Building a Formula Student Car and <span>Racing it in Germany</span></h1>
     <div class="tag-row" style="justify-content:center;margin-top:1rem;">
-      <span class="tag">Force Control</span><span class="tag">HRI</span><span class="tag">Design</span>
+      <span class="tag">Motorsport</span><span class="tag">Mechanical Engineering</span><span class="tag">Formula Student</span>
     </div>
   </div>
   <div class="post-body">
-    <p>Replace this placeholder with your blog content.</p>
-    <h2>Section Heading</h2>
-    <p>More content here...</p>
+    <img src="img/fsg_pegasus.jpeg" alt="Pegasus Racing at Formula Student Germany, Hockenheimring" style="width:100%;border-radius:12px;margin-bottom:1.5rem;"/>
+
+    <p>I joined <strong>Pegasus Racing</strong> — my college's Formula Student team — in July 2015, not really knowing what I was getting into. What followed was over a year of working on a car from 7 to 11 pm almost every day after class, learning more in that workshop than I did in any lecture hall.</p>
+
+    <p>Formula Student is a student engineering competition where teams design, build, and race a small open-wheel car. Every year we'd start from scratch (or close to it), targeting improvements in weight, performance, and reliability over the previous season. About 25 core members would start each year — and by the time competition season rolled around, more than half had dropped out, unable to juggle the hours with their coursework. I stayed.</p>
+
+    <h2>Formula Student Germany at Hockenheimring</h2>
+    <p>The season culminated at <strong>Formula Student Germany</strong> — one of the biggest FSG events in the world, held at the Hockenheimring circuit. Getting there was surreal. Competing on a track that hosts professional motorsport, against teams from universities across Europe and beyond, with a car we'd built by hand.</p>
+
+    <p>But before you race, you have to pass Technical Inspection — and TI is brutal. Every system on the car has to meet strict regulations, and the scrutineers know exactly what they're looking for. We hit a wall early: the head restraint had to be repositioned to satisfy the PERCY template (a safety check for driver head protection), which meant the air intake — mounted just behind the driver's head — would have to move too. Repositioning the intake mid-event is a major rework job, and we were already tight on time.</p>
+
+    <p>We spent a couple of hours in the paddock going through alternatives. Could we adjust the seat position? Modify the roll hoop mounting? Shim the restraint? Eventually we found an approach that satisfied the template geometry without touching the intake — a combination of minor adjustments that weren't obvious individually but worked together. The scrutineer signed it off and we made it through.</p>
+
+    <h2>What I Took Away</h2>
+    <p>The technical skills — CAD, FEA, fabrication — were valuable, but the bigger lessons were about how engineering actually works under pressure. Designs look clean in Solidworks. They rarely look clean at 10 pm in a paddock with a scrutineer waiting. The ability to look at a problem from a different angle when the obvious solution is off the table is something I didn't fully appreciate until I had to do it for real.</p>
+
+    <p>Three years on a racing team also taught me something about commitment. The attrition wasn't because people weren't capable — it was because the work was relentless and the rewards were slow. Learning to stay engaged through that grind, and to find genuine satisfaction in the process rather than just the result, has been useful in almost everything I've done since.</p>
   </div>
 </template>
 
 <script>
+  const POST_ORDER = ['post-hackathon', 'post-fsg'];
+  let currentPostIndex = -1;
+
   function openPost(id) {
     const tpl = document.getElementById(id);
     if (!tpl) return;
+    currentPostIndex = POST_ORDER.indexOf(id);
     document.getElementById('post-content').innerHTML = tpl.innerHTML;
     document.getElementById('blog-list').style.display = 'none';
     document.getElementById('blog-post').style.display = 'block';
+    updateNavButtons();
     window.scrollTo(0, 0);
   }
 
@@ -121,6 +162,16 @@ def detect_wafer(image):
     document.getElementById('blog-post').style.display = 'none';
     document.getElementById('blog-list').style.display = 'block';
     window.scrollTo(0, 0);
+  }
+
+  function navigatePost(direction) {
+    const next = currentPostIndex + direction;
+    if (next >= 0 && next < POST_ORDER.length) openPost(POST_ORDER[next]);
+  }
+
+  function updateNavButtons() {
+    document.getElementById('btn-prev').style.visibility = currentPostIndex > 0 ? 'visible' : 'hidden';
+    document.getElementById('btn-next').style.visibility = currentPostIndex < POST_ORDER.length - 1 ? 'visible' : 'hidden';
   }
 </script>
 

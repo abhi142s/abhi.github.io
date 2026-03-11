@@ -13,7 +13,7 @@
   <div class="nav-tabs">
     <a class="tab-btn" href="index.html">Experience</a>
     <a class="tab-btn active" href="projects.html">Projects</a>
-    <a class="tab-btn" href="blogs.html">Blogs</a>
+    <a class="tab-btn" href="blogs.html">Posts</a>
   </div>
 </nav>
 
@@ -32,9 +32,9 @@
     <div class="proj-card featured">
       <div class="proj-badge">📄 IEEE Publication</div>
       <div class="proj-title">Flexible Magnetometer-Based Soft Sensor</div>
-      <div class="proj-meta">PSG College of Technology · Best Dissertation 1st / 120 · Jan 2017</div>
+      <div class="proj-meta">Surgical Technologies Research Group - University of Leeds · July 2017</div>
       <ul class="bullets">
-        <li>Designed and built a flexible soft sensor using magnetometer principles, awarded best final year dissertation out of 120 students.</li>
+        <li>Designed and built a flexible soft sensor using magnetometer principles.</li>
         <li>Published in IEEE Xplore — covers sensor fabrication, calibration methodology, and experimental validation.</li>
       </ul>
       <div class="tag-row">
@@ -42,6 +42,22 @@
       </div>
       <br/>
       <a class="proj-link" href="https://ieeexplore.ieee.org/document/8234097" target="_blank">📖 Read on IEEE Xplore →</a>
+    </div>
+
+    <!-- IJER Paper -->
+    <div class="proj-card featured">
+      <div class="proj-badge">📄 IJER Publication</div>
+      <div class="proj-title">Remote Controlled RRR Manipulator via Android & Bluetooth</div>
+      <div class="proj-meta">PSG College of Technology · International Journal of Engineering Research · Dec 2016</div>
+      <ul class="bullets">
+        <li>Designed and built a 5-DOF RRR robotic arm controlled wirelessly from an Android smartphone over Bluetooth (HC-05), eliminating the need for proprietary software or dedicated computers.</li>
+        <li>Developed a custom MIT App Inventor application supporting forward kinematics (joint-angle sliders), inverse kinematics (end-effector position input), and Google voice recognition to command the arm.</li>
+        <li>Performed static torque analysis with free-body diagrams to size servo motors at each revolute joint; 3D-printed the ABS plastic framework with hexagonal infill for a high strength-to-weight ratio.</li>
+      </ul>
+      <div class="tag-row">
+        <span class="tag">Robotics</span><span class="tag">Arduino</span><span class="tag">Inverse Kinematics</span><span class="tag">Bluetooth</span><span class="tag">Android</span><span class="tag">3D Printing</span>
+      </div>
+      <br/>
     </div>
   </section>
 
@@ -60,8 +76,28 @@
       <div class="tag-row">
         <span class="tag">Mechanical Design</span><span class="tag">Accessibility</span><span class="tag">Rack & Pinion</span><span class="tag">Patent</span>
       </div>
+      <br/>
+      <a class="proj-link" onclick="openPatent()" style="cursor:pointer;">🏛 View Patent Certificate →</a>
     </div>
   </section>
+
+  <!-- Patent lightbox -->
+  <div id="patent-modal" onclick="closePatent()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:1000;display:none;align-items:center;justify-content:center;padding:2rem;">
+    <img src="img/Patent.png" alt="Patent Certificate IN499246" style="max-width:90vw;max-height:90vh;border-radius:8px;box-shadow:0 8px 40px rgba(0,0,0,0.6);"/>
+  </div>
+
+  <script>
+    function openPatent() {
+      const m = document.getElementById('patent-modal');
+      m.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+    function closePatent() {
+      document.getElementById('patent-modal').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closePatent(); });
+  </script>
 
   <section>
     <div class="section-title">Robotics Projects</div>
@@ -116,7 +152,7 @@
       <div class="proj-meta">PSG College of Technology · Formula Student Germany · 2017</div>
       <ul class="bullets">
         <li>Led gear shifter and roll cage design for the Formula Student race car.</li>
-        <li>Finished 11th out of 75 teams at Formula Student Germany.</li>
+        <li>Finished 11th out of 75 teams at Formula Student Germany at the Cost event.</li>
       </ul>
       <div class="tag-row">
         <span class="tag">Mechanical Design</span><span class="tag">Roll Cage</span><span class="tag">Formula Student</span>
