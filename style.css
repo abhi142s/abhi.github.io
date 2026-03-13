@@ -137,9 +137,9 @@ footer{border-top:1px solid var(--border);padding:1.25rem 2rem;display:flex;just
 @media(max-width:600px){
   .company-logo{width:36px;height:36px;min-width:36px;max-width:36px;min-height:36px;max-height:36px;}
   .blog-card-inner{grid-template-columns:56px 1fr auto;column-gap:0.75rem;row-gap:0.4rem;}
-  .blog-card-inner .blog-thumb{width:56px;height:56px;min-width:56px;max-width:56px;}
-  .blog-card-heading{grid-column:2;}
+  .blog-card-inner .blog-thumb{width:56px;height:56px;min-width:56px;max-width:56px;grid-column:1;grid-row:1;}
+  .blog-card-heading{grid-column:2;grid-row:1;}
   .blog-card-inner .blog-summary{grid-column:1/3;grid-row:2;}
   .blog-card-inner .tag-row{grid-column:1/3;grid-row:3;}
-  .blog-arrow{grid-column:3;grid-row:1;align-self:start;}
+  .blog-arrow{grid-column:3;grid-row:1/4;align-self:center;}
 }
